@@ -1,4 +1,8 @@
-# Compiling
+# What is it?
+
+`tf` stands for **t**rans**f**orm. It's used to modify text.
+
+## Compiling
 
 ```
 go build -o tf main.go
