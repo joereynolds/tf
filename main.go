@@ -25,11 +25,6 @@ func main() {
 	case "title":
 		fmt.Println(strings.Title(text))
 	case "join":
-		fmt.Println(
-			strings.Join(
-				strings.Split(text, " "),
-				os.Args[2],
-			),
-		)
+		fmt.Println(JoinString(text, os.Args[2]))
 	}
 }
