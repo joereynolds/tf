@@ -1,15 +1,15 @@
 # Testing a word gets converted to uppercase
-$ echo "test" | ./tf upper
+$ echo "test" | ./dist/tf upper
 TEST
 
 # Testing a word gets converted to lowercase
-$ echo "GO LOWER PLEASE" | ./tf lower
+$ echo "GO LOWER PLEASE" | ./dist/tf lower
 go lower please
 
 # Testing a word gets converted to titlecase
-$ echo "hello james bond" | ./tf title
+$ echo "hello james bond" | ./dist/tf title
 Hello James Bond
 
 # Testing a string join
-$ echo "I am joining strings" | ./tf join -
+$ echo "I am joining strings" | ./dist/tf join -
 I-am-joining-strings
