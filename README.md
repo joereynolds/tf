@@ -11,7 +11,7 @@ editors that need it.
 
 ### Transformations
 
-For now, the accepted arguments are `upper`, `lower`, `title`, and `join`.
+For now, the accepted arguments are `upper`, `lower`, `title`, `join` and `nth`.
 
 ```
 > echo "hello" | tf upper
@@ -25,6 +25,14 @@ Hello
 
 > echo "you her him" | tf join ":"
 you:her:him
+
+# Replaces every 2nd word with ___
+> echo "This is only a test y'know. Stay calm" | tf nth word 2 ___
+This ___ only ___ test ___ Stay ___
+
+# Replaces every word with ...
+> echo "This is only a test y'know. Stay calm" | tf nth word 1 "..."
+... ... ... ... ... ... ... ...
 ```
 
 ## Developing
