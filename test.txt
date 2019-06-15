@@ -13,3 +13,7 @@ Hello James Bond
 # Testing a string join
 $ echo "I am joining strings" | ./dist/tf join -
 I-am-joining-strings
+
+# Testing an nth word replacement
+$ echo "I am joining strings" | ./dist/tf nth word 2 foo
+I foo joining foo

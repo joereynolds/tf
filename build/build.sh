@@ -1,4 +1,4 @@
-gofmt -w ./main.go
+gofmt -w **/*.go
 
 # Install shelltest
 if [ ! -f ./shelltest ]; then
@@ -11,3 +11,4 @@ output_dir="./dist"
 go build -o "$output_dir/tf" *.go
 
 ./shelltest test.txt
+go test -v ./test

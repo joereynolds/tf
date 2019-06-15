@@ -2,27 +2,39 @@
 
 `tf` stands for **t**rans**f**orm. It's used to modify text.
 
-## Compiling
+It's an editor agnostic text transformer with the goal of being 'pluginned' for
+editors that need it.
+
+## Examples
+
+`tf` operates on standard input, examples below.
+
+### Transformations
+
+For now, the accepted arguments are `upper`, `lower`, `title`, and `join`.
 
 ```
-go build -o tf main.go
+> echo "hello" | tf upper
+HELLO
+
+> echo "HElLo" | tf lower
+hello
+
+> echo "HElLo" | tf title
+Hello
+
+> echo "you her him" | tf join ":"
+you:her:him
 ```
 
-Then running
+## Developing
 
-```
-echo "this is a test | ./tf"
-```
+### Compiling
 
-Once compiled you can do this
+Use the build script in `./build/build.sh`. This will compile an executable into
+the `./dist` directory and run some tests for you.
 
-```
-> echo "test" | ./tf upper
-TEST
-```
+## Testing
 
-Accepted arguments are upper, lower, and title. More to come... maybe
-
-# Testing
-
-Uses https://github.com/liquidz/shelltest for tests (for now). 
+Tests can be ran by running the build script `./build/build.sh`.
+It uses `go test` and [shelltest](https://github.com/liquidz/shelltest).

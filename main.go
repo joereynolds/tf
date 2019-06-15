@@ -3,7 +3,9 @@ package main
 import (
 	"bufio"
 	"fmt"
+	tf "github.com/joereynolds/tf/strings"
 	"os"
+	"strconv"
 	"strings"
 )
 
@@ -25,6 +27,17 @@ func main() {
 	case "title":
 		fmt.Println(strings.Title(text))
 	case "join":
-		fmt.Println(JoinString(text, os.Args[2]))
+		fmt.Println(tf.JoinString(text, os.Args[2]))
+	case "nth":
+		if os.Args[2] == "word" {
+			n, _ := strconv.Atoi(os.Args[3])
+			fmt.Println(
+				tf.ReplaceEveryNthWordWith(
+					n,
+					text,
+					os.Args[4],
+				),
+			)
+		}
 	}
 }
