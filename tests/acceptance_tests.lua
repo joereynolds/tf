@@ -1,38 +1,37 @@
 local luaunit = require "luaunit"
 
-
 function test_from_cli()
     local tests = {
         upper = {
-            command = 'echo "cat" | tf upper', 
+            command = 'echo "cat" | ./src/main.lua upper',
             expected = 'CAT'
         },
         lower = {
-            command = 'echo "CAT" | tf lower', 
+            command = 'echo "CAT" | ./src/main.lua lower',
             expected = 'cat'
         },
         join = {
-            command = 'echo "0800 00 1066" | tf join -', 
+            command = 'echo "0800 00 1066" | ./src/main.lua join -',
             expected = '0800-00-1066'
         },
         reverse = {
-            command = 'echo "natas" | tf reverse', 
+            command = 'echo "natas" | ./src/main.lua reverse',
             expected = 'satan'
         },
         prefix = {
-            command = 'echo "jective" | tf prefix ad', 
+            command = 'echo "jective" | ./src/main.lua prefix ad',
             expected = 'adjective'
         },
         suffix = {
-            command = 'echo "adjecti" | tf suffix ve', 
+            command = 'echo "adjecti" | ./src/main.lua suffix ve',
             expected = 'adjective'
         },
         title = {
-            command = 'echo "mr reynolds" | tf title', 
+            command = 'echo "mr reynolds" | ./src/main.lua title',
             expected = 'Mr Reynolds'
         },
         strip = {
-            command = 'echo "hexllxox thexrex" | tf strip x', 
+            command = 'echo "hexllxox thexrex" | ./src/main.lua strip x',
             expected = 'hello there'
         }
     }

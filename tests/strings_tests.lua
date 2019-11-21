@@ -1,5 +1,5 @@
 local luaunit = require "luaunit"
-local strings = require "strings"
+local strings = require "./src/strings"
 
 function test_string_split_brings_back_correct_results()
     local actual = strings.split("this is my test")

@@ -1,4 +1,4 @@
-local strings = require "strings"
+local strings = require "./src/strings"
 
 local subcommands = {}
 
@@ -9,7 +9,7 @@ Incorrect usage of join
 
 Usage:
   tf join JOIN
-Example: 
+Example:
   echo '0800 00 1066' | tf join -"]]
 
 subcommands.join.requires_subcommand = true
@@ -25,7 +25,7 @@ Incorrect usage of prefix
 
 Usage:
   tf prefix PREFIX
-Example: 
+Example:
   echo 'jective' | tf prefix ad"]]
 subcommands.prefix.requires_subcommand = true
 
@@ -40,7 +40,7 @@ Incorrect usage of suffix
 
 Usage:
   tf suffix SUFFIX
-Example: 
+Example:
   echo 'pain' | tf suffix ful"]]
 
 subcommands.suffix.requires_subcommand = true
@@ -56,7 +56,7 @@ Incorrect usage of strip
 
 Usage:
   tf strip STRIP
-Example: 
+Example:
   echo 'pain' | tf strip i"]]
 subcommands.strip.requires_subcommand = true
 
