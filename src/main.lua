@@ -1,6 +1,6 @@
 #!/usr/bin/env lua
 
-local commands = require "./src/subcommands"
+local commands = require "./src/subcommands/subcommands"
 
 local subcommand = arg[1]
 local subcommand_argument = arg[2]
