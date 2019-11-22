@@ -16,6 +16,7 @@ Options:
 Available commands:
   join     Joins text
   lower    Lowercases text
+  numbers  Gets all numbers from text
   prefix   Prefixes text
   reverse  Reverses text
   strip    Removes characters from text

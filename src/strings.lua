@@ -40,4 +40,14 @@ function strings.suffix(word, suffix)
     return word .. suffix
 end
 
+function strings.numbers(input)
+    local digits = {}
+
+    for word in string.gmatch(input, "%d") do
+        table.insert(digits, word)
+    end
+
+    return table.concat(digits)
+end
+
 return strings

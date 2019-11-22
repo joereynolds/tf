@@ -1,12 +1,13 @@
 local subcommands = {}
 
 subcommands.join = require "./src/subcommands/join"
-subcommands.prefix = require "./src/subcommands/prefix"
-subcommands.suffix = require "./src/subcommands/suffix"
 subcommands.lower = require "./src/subcommands/lower"
-subcommands.upper = require "./src/subcommands/upper"
+subcommands.numbers = require "./src/subcommands/numbers"
+subcommands.prefix = require "./src/subcommands/prefix"
 subcommands.reverse = require "./src/subcommands/reverse"
 subcommands.strip = require "./src/subcommands/strip"
+subcommands.suffix = require "./src/subcommands/suffix"
 subcommands.title = require "./src/subcommands/title"
+subcommands.upper = require "./src/subcommands/upper"
 
 return subcommands
