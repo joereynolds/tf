@@ -9,8 +9,8 @@ editors that need it.
 
 `tf` operates on standard input, examples below.
 
-For now, the accepted arguments are `join`, `prefix `, `suffix `, `lower`, `upper`, `reverse`, `strip`, `title`.
-
+For now, the accepted arguments are `join`, `prefix `, `suffix `, `lower`, `upper`, `reverse`, `strip`, `title`, `dash` and `snake`.
+See `tf --help` for details on their usage.
 
 ```
 > echo "hello" | tf upper
@@ -31,6 +31,8 @@ Please Stop
 > echo 'godtac' | tf upper | tf reverse | tf suffix !
 CATDOG!
 
+> echo 'MyOldschoolVariable' | tf snake
+my_oldschool_variable
 ```
 
 ## Developing
