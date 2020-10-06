@@ -37,4 +37,28 @@ function test_string_numbers()
     luaunit.assertEquals(actual, expected)
 end
 
+function test_string_snake_cases_strings()
+    local actual = strings.snake("myCssVariable")
+    local expected = "my_css_variable"
+    luaunit.assertEquals(actual, expected)
+end
+
+function test_string_snake_cases_strings_with_a_capital_first_letter()
+    local actual = strings.snake("MyCssVariable")
+    local expected = "my_css_variable"
+    luaunit.assertEquals(actual, expected)
+end
+
+function test_string_dash_cases_strings()
+    local actual = strings.dash("myCssVariable")
+    local expected = "my-css-variable"
+    luaunit.assertEquals(actual, expected)
+end
+
+function test_string_dash_cases_strings_with_a_captial_first_letter()
+    local actual = strings.dash("MyCssVariable")
+    local expected = "my-css-variable"
+    luaunit.assertEquals(actual, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())

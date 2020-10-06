@@ -22,9 +22,11 @@ Available commands:
   strip    Removes characters from text
   suffix   Suffixes text
   title    Titlecases text
+  snake    Snakecases text
+  dash     Dashcases text
   upper    Uppercases text]]
 
-if not subcommand or subcommand == '--help' or subcommand == '-h' then
+if not subcommand or subcommand == '--help' or subcommand == '-h' or subcommand == 'help' then
     return print(usage)
 end
 

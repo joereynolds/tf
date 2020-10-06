@@ -28,7 +28,7 @@ function strings.split(sentence)
 end
 
 function strings.strip(sentence, characters)
-    local result, _ = string.gsub(sentence, "[".. characters .. "]", "")
+    local result, _ = string.gsub(sentence, "[" .. characters .. "]", "")
     return result
 end
 
@@ -48,6 +48,28 @@ function strings.numbers(input)
     end
 
     return table.concat(digits)
+end
+
+function strings.snake(input)
+    local result, _ = string.gsub(input, "[A-Z]", "_%1")
+
+    local starting_char = string.sub(result, 1, 1)
+    if starting_char == '_' then
+        result = string.sub(result, 2)
+    end
+
+    return string.lower(result)
+end
+
+function strings.dash(input)
+    local result, _ = string.gsub(input, "[A-Z]", "-%1")
+
+    local starting_char = string.sub(result, 1, 1)
+    if starting_char == '-' then
+        result = string.sub(result, 2)
+    end
+
+    return string.lower(result)
 end
 
 return strings
