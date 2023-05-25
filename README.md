@@ -9,7 +9,7 @@ editors that need it.
 
 `tf` operates on standard input, examples below.
 
-For now, the accepted arguments are `join`, `prefix `, `suffix `, `lower`, `upper`, `reverse`, `strip`, `title`, `dash` and `snake`.
+For now, the accepted arguments are `join`, `prefix `, `suffix `, `lower`, `upper`, `reverse`, `strip`, `title`, `kebab` and `snake`.
 See `tf --help` for details on their usage.
 
 ```

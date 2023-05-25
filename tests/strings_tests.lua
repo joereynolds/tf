@@ -1,6 +1,6 @@
 local luaunit = require "luaunit"
 
-local dash    = require "./src/subcommands/dash"
+local kebab    = require "./src/subcommands/kebab"
 local join    = require "./src/subcommands/join"
 local numbers = require "./src/subcommands/numbers"
 local prefix  = require "./src/subcommands/prefix"
@@ -58,14 +58,14 @@ function test_string_snake_cases_strings_with_a_capital_first_letter()
     luaunit.assertEquals(actual, expected)
 end
 
-function test_string_dash_cases_strings()
-    local actual = dash.process("myCssVariable")
+function test_string_kebab()
+    local actual = kebab.process("myCssVariable")
     local expected = "my-css-variable"
     luaunit.assertEquals(actual, expected)
 end
 
-function test_string_dash_cases_strings_with_a_captial_first_letter()
-    local actual = dash.process("MyCssVariable")
+function test_string_kebab_cases_strings_with_a_captial_first_letter()
+    local actual = kebab.process("MyCssVariable")
     local expected = "my-css-variable"
     luaunit.assertEquals(actual, expected)
 end

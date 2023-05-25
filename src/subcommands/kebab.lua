@@ -1,18 +1,18 @@
 local strings = require "./src/strings"
 
-local dash = {}
+local kebab = {}
 
-dash.usage = [[
-Incorrect usage of dash
+kebab.usage = [[
+Incorrect usage of kebab
 
 Usage:
-  tf dash
+  tf kebab
 Example:
-  echo 'myCssVariable' | tf dash"]]
+  echo 'myCssVariable' | tf kebab"]]
 
-dash.requires_subcommand = false
+kebab.requires_subcommand = false
 
-function dash.process(input)
+function kebab.process(input)
     local result, _ = string.gsub(input, "[A-Z]", "-%1")
 
     local starting_char = string.sub(result, 1, 1)
@@ -23,4 +23,4 @@ function dash.process(input)
     return string.lower(result)
 end
 
-return dash
+return kebab

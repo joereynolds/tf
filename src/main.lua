@@ -21,10 +21,10 @@ Available commands:
   reverse  Reverses text
   strip    Removes characters from text
   suffix   Suffixes text
-  title    Titlecases text
-  snake    Snakecases text
-  dash     Dashcases text
-  upper    Uppercases text]]
+  title    Titlecases text (Like This)
+  snake    Snakecases text (like_this)
+  kebab    Kebabcases text (like-this)
+  upper    Uppercases text (LIKE THIS)]]
 
 if not subcommand or subcommand == '--help' or subcommand == '-h' or subcommand == 'help' then
     return print(usage)

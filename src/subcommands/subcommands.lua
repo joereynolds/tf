@@ -10,6 +10,6 @@ subcommands.suffix = require "./src/subcommands/suffix"
 subcommands.title = require "./src/subcommands/title"
 subcommands.upper = require "./src/subcommands/upper"
 subcommands.snake = require "./src/subcommands/snake"
-subcommands.dash = require "./src/subcommands/dash"
+subcommands.kebab = require "./src/subcommands/kebab"
 
 return subcommands
