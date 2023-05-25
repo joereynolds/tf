@@ -12,8 +12,8 @@ Example:
 
 suffix.requires_subcommand = true
 
-function suffix.process(input, chars)
-    return strings.suffix(input, chars)
+function suffix.process(word, suffix)
+    return word .. suffix
 end
 
 return suffix

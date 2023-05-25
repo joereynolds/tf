@@ -5,7 +5,13 @@ local numbers = {}
 numbers.requires_subcommand = false
 
 function numbers.process(input)
-    return strings.numbers(input)
+    local digits = {}
+
+    for word in string.gmatch(input, "%d") do
+        table.insert(digits, word)
+    end
+
+    return table.concat(digits)
 end
 
 return numbers

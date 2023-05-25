@@ -13,7 +13,14 @@ Example:
 dash.requires_subcommand = false
 
 function dash.process(input)
-    return strings.dash(input)
+    local result, _ = string.gsub(input, "[A-Z]", "-%1")
+
+    local starting_char = string.sub(result, 1, 1)
+    if starting_char == '-' then
+        result = string.sub(result, 2)
+    end
+
+    return string.lower(result)
 end
 
 return dash

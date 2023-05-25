@@ -12,8 +12,8 @@ Example:
 
 prefix.requires_subcommand = true
 
-function prefix.process(input, chars)
-    return strings.prefix(input, chars)
+function prefix.process(word, prefix)
+    return prefix .. word
 end
 
 return prefix

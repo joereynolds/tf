@@ -12,8 +12,9 @@ Example:
 
 join.requires_subcommand = true
 
-function join.process(input, join_with)
-    return strings.join(input, join_with)
+function join.process(sentence, join_char)
+    local words = strings.split(sentence)
+    return table.concat(words, join_char)
 end
 
 return join

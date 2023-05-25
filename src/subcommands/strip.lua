@@ -12,8 +12,9 @@ Example:
 
 strip.requires_subcommand = true
 
-function strip.process(input, strip_char)
-    return strings.strip(input, strip_char)
+function strip.process(sentence, characters)
+    local result, _ = string.gsub(sentence, "[" .. characters .. "]", "")
+    return result
 end
 
 return strip
